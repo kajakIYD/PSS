@@ -11,9 +11,9 @@ class PI
         // max_u - maximum value of manipulated variable
         // min_u - minimum value of manipulated variable
 
-        PI(double dt, double max_u, double min_u, double Kr, double Ti);
+        PI(double dt, double max_u, double Kr, double Ti);
 
-        double simulate(double setpoint, double pv);
+        double simulate(double setpoint, double pv, double dt);
 
         ~PI();
 

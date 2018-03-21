@@ -21,6 +21,16 @@ public:
 private slots:
 
 
+    void on_w_changeKr_valueChanged(double arg1);
+
+    void on_w_changeTi_valueChanged(double arg1);
+
+    void on_w_changeMax_u_valueChanged(double arg1);
+
+    void on_w_changeSp_valueChanged(double arg1);
+
+    void on_pushButton_toggled(bool checked);
+
 public:
 
     void Update(QVector<double> x, QVector<double> y);

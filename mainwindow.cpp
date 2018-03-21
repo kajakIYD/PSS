@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include <QDebug>
+#include "pi.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -17,16 +18,36 @@ MainWindow::MainWindow(QWidget *parent) :
             //3. receiver - wyjście
             //4. slot -
             //disconnect - dezaktywuje połączenie
-    ui->customPlot->addGraph();
+    ui->Plot1->addGraph();
 
 }
 
 void MainWindow::Update(QVector<double> x, QVector<double> y)
 {
-    ui->customPlot->graph(0)->setData(x,y);
-    ui->customPlot->xAxis->setLabel("x");
-    ui->customPlot->yAxis->setLabel("y");
-    ui->customPlot->replot();
+    ui->Plot1->graph(0)->setData(x,y);
+    ui->Plot1->xAxis->setLabel("x");
+    ui->Plot1->yAxis->setLabel("y");
+    ui->Plot1->replot();
+}
+
+void MainWindow::on_w_changeKr_valueChanged(double arg1)
+{
+    //pi.Kr = arg1;
+}
+
+void MainWindow::on_w_changeTi_valueChanged(double arg1)
+{
+    //pi.Ti = arg1;
+}
+
+void MainWindow::on_w_changeMax_u_valueChanged(double arg1)
+{
+    //pi.max_u = arg1;
+}
+
+void MainWindow::on_w_changeSp_valueChanged(double arg1)
+{
+
 }
 
 MainWindow::~MainWindow()
@@ -52,3 +73,12 @@ void MainWindow::on_pushButton_2_clicked()
         qDebug() <<"No is clicked";
     }
 }*/
+
+
+
+
+
+void MainWindow::on_pushButton_toggled(bool checked)
+{
+    bool x = checked;
+}
