@@ -29,7 +29,9 @@ SOURCES += \
     pi.cpp \
     subject.cpp \
     qcustomplot.cpp \
-    regulator.cpp
+    regulator.cpp \
+    obiekt.cpp \
+    observer.cpp
         pi.cpp \
 
 HEADERS += \
@@ -38,7 +40,8 @@ HEADERS += \
     subject.h \
     observer.h \
     qcustomplot.h \
-    regulator.h
+    regulator.h \
+    obiekt.h
         pi.h \
 
 FORMS += \

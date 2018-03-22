@@ -17,7 +17,7 @@ PI::PI(double dt, double max_u, double Kr, double Ti) :
 
 }
 
-double PI::simulate(double setpoint, double pv, double dt)
+double PI::simulate(double pv, double dt)
 {
     // calculate error
     double e = setpoint - pv;
