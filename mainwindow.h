@@ -35,6 +35,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_pushButton_2_clicked();
+
 private:
     QTimer *timer;
     PI *s_pi;
@@ -46,7 +48,7 @@ private:
     QVector<double> sp;
     QVector<double> v_u;
     int time = 0;
-
+    bool krok = false;
 public:
 
     //void Update(QVector<double> x, QVector<double> y);

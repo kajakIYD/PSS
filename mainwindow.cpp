@@ -33,7 +33,7 @@ ui->Plot1->graph(0)->setBrush(QBrush(QColor(0, 0, 255, 20)));
 
 void MainWindow::updateView()
 {
-    if (mode)
+    if (mode || krok)
     {
         time++;
         x.push_back(time);
@@ -64,6 +64,7 @@ void MainWindow::updateView()
 
 
         ui->Plot2->replot();
+        krok = false;,;''
     }
 }
 
@@ -132,4 +133,10 @@ void MainWindow::on_pushButton_clicked()
     {
         ui->pushButton->text() = "Start";
     }
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    updateView();
+    krok = true;
 }
