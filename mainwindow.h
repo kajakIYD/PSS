@@ -33,11 +33,14 @@ private slots:
 
     void on_horizontalSlider_valueChanged(int value);
 
+    void on_pushButton_clicked();
+
 private:
     QTimer *timer;
     PI *s_pi;
     obiekt *s_ob;
 
+    bool mode = false;
     QVector<double> x;
     QVector<double> y;
     QVector<double> sp;
