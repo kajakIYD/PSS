@@ -3,7 +3,7 @@
 #include <QMessageBox>
 #include <QDebug>
 
-
+//Mama!
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
