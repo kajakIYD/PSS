@@ -1,8 +1,8 @@
 #ifndef OBIEKT_H
 #define OBIEKT_H
+#include "subject.h"
 
-
-class obiekt
+class obiekt : public Subject
 {
 public:
     obiekt(double A, double c);

@@ -6,6 +6,7 @@
 
 QT       += core gui charts     # this is used to indicate what liblaries (Qt modules) are being used in the project
 
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 TARGET = firstApp     # this is the name of the app
@@ -31,8 +32,19 @@ SOURCES += \
     qcustomplot.cpp \
     regulator.cpp \
     obiekt.cpp \
-    observer.cpp
+    subject.cpp \
+    plotdelegate.cpp \
+    tinyxml_2_6_2/tinyxml/tinystr.cpp \
+    tinyxml_2_6_2/tinyxml/tinyxml.cpp \
+    tinyxml_2_6_2/tinyxml/tinyxmlerror.cpp \
+    tinyxml_2_6_2/tinyxml/tinyxmlparser.cpp \
+    configparser.cpp \
+    config.cpp \
+    arx.cpp \
+    siso.cpp \
+    loggerPF.cpp \
         pi.cpp \
+    savemeas.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -41,8 +53,21 @@ HEADERS += \
     observer.h \
     qcustomplot.h \
     regulator.h \
-    obiekt.h
+    obiekt.h \
+    subject.h \
+    plotdelegate.h \
+    tinyxml_2_6_2/tinyxml/tinystr.h \
+    tinyxml_2_6_2/tinyxml/tinyxml.h \
+    configparser.h \
+    config.h \
+    arx.h \
+    siso.h \
+    loggerPF.h \
         pi.h \
+    savemeas.h
 
 FORMS += \
         mainwindow.ui
+
+DISTFILES += \
+    PSS_Config.xml

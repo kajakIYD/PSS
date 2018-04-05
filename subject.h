@@ -1,18 +1,18 @@
 #ifndef SUBJECT_H
 #define SUBJECT_H
+#include "observer.h"
 
-#include <iostream>
-#include <vector>
-#include "mainwindow.h"
+class Observer;
 
 class Subject
 {
-    std::vector<MainWindow*> obs_list;
-
 public:
-    void Attach(MainWindow *obs);
-    //void Detach(MainWindow *obs);
-    void Notify();
+    virtual ~Subject ();
+    bool RegisterObserver (Observer * observer);
+    bool UnregisterObserver (Observer * observer);
+    void Notify (double u,  double y) const;
+private:
+    std::list<Observer * > s_Observers;
 };
 
 #endif // SUBJECT_H

@@ -17,72 +17,51 @@
    <property name="enabled">
     <bool>true</bool>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="4" column="2" rowspan="4">
-     <widget class="QCustomPlot" name="Plot2" native="true"/>
-    </item>
-    <item row="0" column="2" rowspan="4">
-     <widget class="QCustomPlot" name="Plot1" native="true"/>
-    </item>
-    <item row="8" column="1">
-     <widget class="QLabel" name="label_5">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>t</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QDoubleSpinBox" name="w_changeSp"/>
-    </item>
-    <item row="2" column="1">
-     <widget class="QDoubleSpinBox" name="w_changeMax_u"/>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_6">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>SP</string>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1021</width>
+      <height>761</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Simulation</string>
+     </attribute>
+     <widget class="QDoubleSpinBox" name="w_changeU">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>280</y>
+        <width>64</width>
+        <height>25</height>
+       </rect>
       </property>
      </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QDoubleSpinBox" name="w_changeKr"/>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_3">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Kr</string>
+     <widget class="QDoubleSpinBox" name="w_changeMax_u">
+      <property name="geometry">
+       <rect>
+        <x>98</x>
+        <y>160</y>
+        <width>64</width>
+        <height>25</height>
+       </rect>
       </property>
      </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Ti</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
      <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>160</y>
+        <width>58</width>
+        <height>24</height>
+       </rect>
+      </property>
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -92,14 +71,189 @@
        <string>Max_u</string>
       </property>
      </widget>
-    </item>
-    <item row="8" column="2">
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>83</y>
+        <width>17</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Ti</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="w_changeSp">
+      <property name="geometry">
+       <rect>
+        <x>98</x>
+        <y>237</y>
+        <width>64</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="w_changeTi">
+      <property name="geometry">
+       <rect>
+        <x>98</x>
+        <y>83</y>
+        <width>64</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>237</y>
+        <width>22</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>SP</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>6</y>
+        <width>19</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Kr</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>98</x>
+        <y>314</y>
+        <width>80</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Krok</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>280</y>
+        <width>22</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>U</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="w_changeKr">
+      <property name="geometry">
+       <rect>
+        <x>98</x>
+        <y>6</y>
+        <width>64</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>314</y>
+        <width>80</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Start</string>
+      </property>
+     </widget>
+     <widget class="QCustomPlot" name="Plot1" native="true">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>60</y>
+        <width>741</width>
+        <height>256</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCustomPlot" name="Plot2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>380</y>
+        <width>741</width>
+        <height>231</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>650</y>
+        <width>16</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>t</string>
+      </property>
+     </widget>
      <widget class="QSlider" name="horizontalSlider">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>670</y>
+        <width>821</width>
+        <height>18</height>
+       </rect>
+      </property>
       <property name="minimum">
        <number>10</number>
       </property>
       <property name="maximum">
        <number>5000</number>
+      </property>
+      <property name="singleStep">
+       <number>100</number>
       </property>
       <property name="pageStep">
        <number>10</number>
@@ -108,34 +262,164 @@
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QDoubleSpinBox" name="w_changeKr_3"/>
-    </item>
-    <item row="7" column="1">
-     <widget class="QDoubleSpinBox" name="w_changeTi_2"/>
-    </item>
-    <item row="1" column="1">
-     <widget class="QDoubleSpinBox" name="w_changeTi"/>
-    </item>
-    <item row="4" column="0">
-     <widget class="QPushButton" name="pushButton">
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Config</string>
+     </attribute>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>60</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
       <property name="text">
-       <string>Start</string>
+       <string>A_params</string>
       </property>
      </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QDoubleSpinBox" name="w_changeKr_2"/>
-    </item>
-    <item row="4" column="1">
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>60</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
       <property name="text">
-       <string>Krok</string>
+       <string>B_params</string>
       </property>
      </widget>
-    </item>
-   </layout>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>110</y>
+        <width>231</width>
+        <height>85</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>110</y>
+        <width>231</width>
+        <height>85</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="CreateNewARX">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>140</y>
+        <width>131</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Create new ARX</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="w_Change_Delay">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>260</y>
+        <width>64</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="w_Change_SwitchTime">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>260</y>
+        <width>64</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>230</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Delay</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>240</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Switch time</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>390</y>
+        <width>231</width>
+        <height>85</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>340</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>A_params</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_4">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>390</y>
+        <width>231</width>
+        <height>85</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>340</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>B_params</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

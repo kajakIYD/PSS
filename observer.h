@@ -2,17 +2,10 @@
 #define OBSERVER_H
 #include <QVector>
 
-class observer
-{
-
+class Observer {
 public:
-    observer();
-    //virtual ~observer(){}
-
-protected:
-    //virtual void updateView(QVector<double> x, QVector<double> y);
-
-
+    virtual ~Observer () {}
+    virtual void UpdateView(double x, double y) = 0;
 };
 
 #endif // OBSERVER_H

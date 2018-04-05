@@ -6,18 +6,22 @@
 #include "qcustomplot.h"
 #include "pi.h"
 #include "obiekt.h"
+#include "arx.h"
+#include "plotdelegate.h"
+#include "savemeas.h"
 
 
 namespace Ui {
 class MainWindow;
 }
 
-class MainWindow : public QMainWindow, public observer
+class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
     explicit MainWindow(PI *pi, obiekt *ob, QWidget *parent = 0);
+    explicit MainWindow(ARX* arx, QWidget *parent = 0);
     ~MainWindow();
 
 private slots:
@@ -37,10 +41,17 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_w_changeU_valueChanged(double arg1);
+
 private:
     QTimer *timer;
     PI *s_pi;
     obiekt *s_ob;
+    ARX *s_arx;
+    PlotDelegate *plotDelegate;
+    //SaveMeas *saveMeas;
+
+    void updateViewStep();
 
     bool mode = false;
     QVector<double> x;
@@ -50,9 +61,6 @@ private:
     int time = 0;
     bool krok = false;
 public:
-
-    //void Update(QVector<double> x, QVector<double> y);
-
     Ui::MainWindow *ui;
 };
 
