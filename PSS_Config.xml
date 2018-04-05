@@ -5,7 +5,7 @@
 	</file_comment>
 	
 	<delay>
-    <value>5</value>
+    <value>2</value>
     <description>
 	JustDelay
 	</description>
@@ -15,16 +15,16 @@
 	<description>
 	JustBParams
 	</description>
-	<value>1, 2, 3, 4</value>
-	<valueN>10, 20, 30, 40</valueN>
+	<value>0.1, 0.2, 0.4</value>
+	<valueN>0.1, 0.4, 0.1</valueN>
 	</b_Parameters>
 	
 	<a_Parameters>
 	<description>
 	JustAParams
 	</description>
-	<value>1, 2, 3, 4</value>
-	<valueN>13, 25, 40, 60</valueN>
+	<value>0.2, 0.1</value>
+	<valueN>0.3, 0.5</valueN>
 	</a_Parameters>
 	
 	<switch_time>

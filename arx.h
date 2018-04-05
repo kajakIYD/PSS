@@ -13,14 +13,31 @@ class ARX : public SISO, public Subject
 {
 public:
     ARX();
-
+    /*!
+     * \brief simulate_step
+     * perform one simulation step
+     */
     double Simulate_step(double input);
+    /*!
+     * \brief GetSwitchTime()
+     * Used for getting time of parameter switching
+     */
     int GetSwitchTime();
+    /*!
+     * \brief UpdateParameters();
+     * Used for updating parameters of arx object during simulation
+     */
     void UpdateParameters();
 
+    /*!
+     * \brief public_U
+     * Current control value, depending on value from GUI
+     * make it private and add method that allow to set that value
+     */
     double public_U=0;
 
 private:
+
     Config *conf;
     std::default_random_engine generator;
     std::vector<double> parA;
@@ -28,11 +45,12 @@ private:
     std::deque<double> u;
     std::deque<double> y;
 
-    int dA;
-    int dB;
-    int k;
-    int time = 0;
-    int switchTime=0;
+    int s_dA;
+    int s_dB;
+    int s_k;
+    int s_time = 0;
+    int s_switchTime=0;
+    double s_var = 0.00000001;
 
 };
 

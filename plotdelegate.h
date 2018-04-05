@@ -9,7 +9,6 @@ class PlotDelegate : public Observer
 {
 public:
     PlotDelegate(Ui::MainWindow* ui, QMainWindow* mw);
-    //PlotDelegate();
     virtual void UpdateView(double u, double y);
 private:
     Ui::MainWindow * ui;

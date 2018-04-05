@@ -21,6 +21,10 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(PI *pi, obiekt *ob, QWidget *parent = 0);
+    /*!
+     * \brief MainWindow
+     * Ctor made for controlling observers and init GUI
+     */
     explicit MainWindow(ARX* arx, QWidget *parent = 0);
     ~MainWindow();
 
@@ -44,12 +48,15 @@ private slots:
     void on_w_changeU_valueChanged(double arg1);
 
 private:
+    ///Sets of pointers to access proper methods and fields
     QTimer *timer;
     PI *s_pi;
     obiekt *s_ob;
     ARX *s_arx;
-    PlotDelegate *plotDelegate;
-    //SaveMeas *saveMeas;
+    PlotDelegate *s_plotDelegate;
+
+    ///Pointer to class saving measurements
+    SaveMeas *s_saveMeas;
 
     void updateViewStep();
 

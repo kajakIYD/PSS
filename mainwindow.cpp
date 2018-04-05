@@ -9,10 +9,10 @@ MainWindow::MainWindow(ARX *arx, QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    plotDelegate = new PlotDelegate(ui, this);
+    s_plotDelegate = new PlotDelegate(ui, this);
     //logger = new SaveMeas("E:\\Qt\\Projects\\PSS\\TestFile.txt");
 
-    arx->RegisterObserver(plotDelegate);
+    arx->RegisterObserver(s_plotDelegate);
 
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(updateView()));
@@ -72,7 +72,7 @@ void MainWindow::on_horizontalSlider_valueChanged(int value)
 
 MainWindow::~MainWindow()
 {
-    s_arx->UnregisterObserver(plotDelegate);
+    s_arx->UnregisterObserver(s_plotDelegate);
     delete ui;
 }
 

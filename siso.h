@@ -11,6 +11,7 @@ public:
      * perform one simulation step
      */
     virtual double Simulate_step(double input) = 0;
+    //vi. destr.
 };
 
 #endif // SISO_H
